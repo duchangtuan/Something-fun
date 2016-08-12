@@ -11,7 +11,7 @@ class db(object):
                               host=host,
                               passwd=passwd,
                               db=db)
-        self._cursor = self._db.cursor(cursorclass=DB.cursors.DictCursor)
+        self._cursor = self._db.cursor()
         self.table_name = 't1'
 
     def query(self, query, gap=25):
