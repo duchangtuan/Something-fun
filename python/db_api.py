@@ -25,3 +25,4 @@ _db = db()
 result = _db.query("select * from " + _db.table_name)
 print result
 
+_db.query("create table %s as (select * from %s)" % ('t3', 't1'))
