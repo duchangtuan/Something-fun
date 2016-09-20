@@ -18,13 +18,13 @@ def build_target(platform, compiler, solution, target):
     set_env_script = "vcvarsall.bat %s" % platform
 
     if platform == 'amd64' and compiler == 'msvs':
-        path_to_build_folder = os.path.join(path_to_msvs_amd64, 'windows_amd64_msvs')
+        path_to_build_folder = os.path.join(work_path, 'windows_amd64_msvs')
     elif platform == 'x86' and compiler == 'msvs':
-        path_to_build_folder = os.path.join(path_to_msvs_x86, 'windows_x86_msvs')
+        path_to_build_folder = os.path.join(work_path, 'windows_x86_msvs')
     elif platform == 'amd64' and compiler == 'icl':
-        path_to_build_folder = os.path.join(path_to_msvs_x86, 'windows_amd64_icl')
+        path_to_build_folder = os.path.join(work_path, 'windows_amd64_icl')
     elif platform == 'x86' and compiler == 'icl':
-        path_to_build_folder = os.path.join(path_to_msvs_x86, 'windows_x86_icl')
+        path_to_build_folder = os.path.join(work_path, 'windows_x86_icl')
 
     if platform == 'amd64':
         path_to_msvs = path_to_msvs_amd64
